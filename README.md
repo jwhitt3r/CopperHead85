@@ -18,7 +18,7 @@ import base64
 parser = argparse.ArgumentParser(description='Welcome to the CopperHead85 USW CTF 2020 Challenge!', epilog='The UPX CyberChef is the best in packing!')
 parser.add_argument('-p', action='store', type=str, dest="input_password", help="the password used to compare to answer", default=True)
 
-zxcvf = "6Z6p_ATDHq@:WA:=#)Hb0LJf/"
+zxcvf = "<DutG6Z6p_ATDHq@:WA:=#)Hb0LJf/I/"
 args = parser.parse_args()
 
 user_input = args.input_password
@@ -61,14 +61,16 @@ usage: Copperhead85.exe [-h] [-p INPUT_PASSWORD]
 Running the script.exe -h will output the clue: "The UPX CyberChef is the best in packing!"
 
 ```zsh
-$ Copperhead85.exe -h
-usage: Copperhead.exe [-h] [-p INPUT_PASSWORD]
+usage: Copperhead85.py [-h] [-p INPUT_PASSWORD]
 
 Welcome to the CopperHead85 USW CTF 2020 Challenge!
 
 optional arguments:
   -h, --help         show this help message and exit
-  -p INPUT_PASSWORD  the password used to compare to answer
+  -p INPUT_PASSWORD  the password field used to compare to answer. Remember to
+                     try quotes around the flag if the program/terminal
+                     doesn't allow you to enter the flag e.g., 'Flag' or
+                     "Flag"
 
 The UPX CyberChef is the best in packing!
 ```
@@ -87,10 +89,10 @@ From this output, we get a directory named Copper85.exe_extracted. In this file,
 Looking in the file, we next need to find a Base85 string
 
 ```
-6Z6p_ATDHq@:V>T<DusS0JY=L<(6
+<DutG6Z6p_ATDHq@:WA:=#)Hb0LJf/I/
 ```
 
 Taking this string we can either use python to decode from Base85 or we can use CyberChef as per the hint we can paste the Base85 string into the input, and add the "From Base85" to the Recipe. This should output the string
 ```
-CopperheadUSW2020CTF
+USW{CopperheadUSW2020CTF}
 ```
