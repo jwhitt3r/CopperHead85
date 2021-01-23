@@ -1,5 +1,5 @@
 # Introduction
-The CopperHead85 CTF challenge is focused at reverse engineering a compiled python exe that holds a BASE85(ASCII85) encoded password
+The CopperHead85 USW (University of South Wales) CTF challenge is focused at reverse engineering a compiled python exe that holds a BASE85(ASCII85) encoded password.
 
 # Compilation
 To create the application the following applications are required: 
